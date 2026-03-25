@@ -1,12 +1,8 @@
-from fastapi import FastAPI
+from main import app
+import database
 
-app = FastAPI()
-
-@app.post("/logout",
-          tags=['Log Out'],
-          summary='This is Log Out section.',
-          description='This function simulates log out feature.')
-
-
+@app.post("/logout")
 def logout():
-    return {"message": "Youiui have logged out successfully."}
+    database.current_user["email"] = None
+    database.current_user["password"] = None
+    return {"message": "You have logged out successfully."}
