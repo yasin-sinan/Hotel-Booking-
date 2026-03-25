@@ -1,12 +1,15 @@
-from fastapi import FastAPI
-
-app = FastAPI()
-
+from main import app
+import database
 
 @app.post("/login")
 def login(email: str, password: str):
-        if email not in users_email:
-                return {"message": "user not found"}
+    for user_info in database.users_email:
+        if user_info["email"] == email:
+            if user_info["password"] == password:
+                database.current_user["email"] = email
+                database.current_user["password"] = password
+                return {"message": f"{email} login successfully"}
+            else:
+                return {"message": f"password for {email} incorrect"}
 
-        current_user["email"] = email
-        return {"message": f"{email} login"}
+    return {"message": f"{email} not found"}
