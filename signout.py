@@ -9,4 +9,4 @@ app = FastAPI()
 
 
 def logout():
-    return {"message": "Youiui have logged out successfully."}
+    return {"message": "You have logged out successfully."}
