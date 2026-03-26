@@ -1,11 +1,5 @@
-from fastapi import FastAPI
-
-app = FastAPI()
-
-users_email = [
-    {"email": "zeki.tazegul@motopp.nl", "password": "123456"},
-    {"email": "samaneh.noori@motopp.nl", "password": "654321"}
-]
+import database
+from fastapi import app
 
 current_user = {"email": None, "password": None}
 
