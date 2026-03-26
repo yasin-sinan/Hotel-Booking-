@@ -1,15 +1,27 @@
-import database
-from fastapi import app
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
 
-current_user = {"email": None, "password": None}
+register_router = APIRouter()
 
-@app.post("/register")
-def register(email: str, password: str):
-    if any(user["email"] == email for user in users_email):
-        return {"message": f"{email} already exists"}
+# Basit hafıza tabanlı "veritabanı"
+users_db = set()
 
-    users_email.append({"email": email, "password": password})
-    current_user["email"] = email
-    current_user["password"] = password
 
-    return {"message": f"{email} registered successfully"}
+class RegisterRequest(BaseModel):
+    email: str
+    password: str
+
+
+@register_router.post("/")
+def register(data: RegisterRequest):
+    if data.email in users_db:
+        # Kullanıcı zaten kayıtlı
+        raise HTTPException(status_code=200, detail="User already exists")
+
+    # Yeni kullanıcıyı ekle
+    users_db.add(data.email)
+
+    return {
+        "message": "User registered successfully",
+        "email": data.email
+    }

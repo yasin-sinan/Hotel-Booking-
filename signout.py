@@ -1,12 +1,8 @@
-from fastapi import FastAPI
+from fastapi import APIRouter
 
-app = FastAPI()
+signout_router = APIRouter()
 
-@app.post("/logout",
-          tags=['Log Out'],
-          summary='This is Log Out section.',
-          description='This function simulates log out feature.')
-
-
+@signout_router.post("/")
 def logout():
+    # Simulate logout
     return {"message": "You have logged out successfully."}

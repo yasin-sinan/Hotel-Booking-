@@ -1,12 +1,16 @@
-from fastapi import FastAPI
-from register import users_email
-app = FastAPI()
+from fastapi import APIRouter
+from pydantic import BaseModel
 
+login_router = APIRouter()
 
-@app.post("/login")
-def login(email: str, password: str):
-        if email not in users_email:
-                return {"message": "user not found"}
+class LoginRequest(BaseModel):
+    email: str
+    password: str
 
-        current_user["email"] = email
-        return {"message": f"{email} login"}
+@login_router.post("/")
+def login(data: LoginRequest):
+    # For now, just simulate login
+    return {
+        "message": "User logged in successfully",
+        "email": data.email
+    }
