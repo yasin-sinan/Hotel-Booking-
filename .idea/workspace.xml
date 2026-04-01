@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeb7cc40-177e-411b-8fa0-a754d9dce14c" name="Changes" comment="I have imported users_email database from register.py" />
+    <list default="true" id="eeb7cc40-177e-411b-8fa0-a754d9dce14c" name="Changes" comment="Merge remote-tracking branch 'origin/develop' into develop" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +122,31 @@
       <option name="project" value="LOCAL" />
       <updated>1775054938546</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="I have imported users_email database from register.py">
+      <option name="closed" value="true" />
+      <created>1775055302903</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1775055302903</updated>
+    </task>
+    <task id="LOCAL-00005" summary="I have imported users_email database from register.py">
+      <option name="closed" value="true" />
+      <created>1775055467318</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1775055467318</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1775055547069</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1775055547069</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,8 +154,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Signout feature is prepared." />
+    <MESSAGE value="1 april from booking to hotel booking repo develop" />
     <MESSAGE value="I have imported users_email database from register.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="I have imported users_email database from register.py" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/develop' into develop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/develop' into develop" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Hotel_Booking_$Signout.coverage" NAME="Signout Coverage Results" MODIFIED="1774452069014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
