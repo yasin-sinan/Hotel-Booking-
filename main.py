@@ -9,6 +9,10 @@ from db.database import engine
 from routers.user import router as user_router
 from routers.booking import router as booking_router
 from routers.preferences import router as preferences_router
+from routers.hotel import router as hotel_router
+
+
+
 
 # Lifespan:  Create tables when app starts up.
 @asynccontextmanager
@@ -27,7 +31,7 @@ app = FastAPI(
 app.include_router(user_router)
 app.include_router(preferences_router)
 app.include_router(booking_router)
-
+app.include_router(hotel_router)
 
 # Basic test end point to see whether the app is alive :)
 @app.get("/")
