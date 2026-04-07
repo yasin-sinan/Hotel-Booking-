@@ -55,3 +55,12 @@ def get_current_user(token: str = Depends(oauth2_scheme)):
         raise HTTPException(status_code=401, detail="Invalid token")
 
 
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password[:72], hashed_password)
+
+def get_current_admin(current_user: User = Depends(get_current_user)):
+    if not current_user.is_admin:
+        raise HTTPException(status_code=403, detail="Admin access required")
+    return current_user
+
